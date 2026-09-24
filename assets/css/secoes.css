@@ -1550,3 +1550,10 @@ html.travado body { overflow: hidden; overscroll-behavior: none; }
 .marca { position: relative; z-index: 20; overflow: visible; flex-shrink: 0; }
 .marca__simbolo, .marca__texto { position: relative; z-index: 21; }
 
+
+/* CORRECAO TITULO HERO - 24-09-2026 */
+@media (min-width: 900px) {
+  .hero__texto { max-width: 42ch; }
+  .hero__titulo { max-width: none; width: max-content; }
+}
+
