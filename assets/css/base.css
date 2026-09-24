@@ -1,0 +1,529 @@
+/* ==========================================================================
+   EXCLUSIVA HAIR — base.css
+   Tokens de design, reset, tipografia e componentes primitivos.
+   Paleta extraída dos materiais reais da marca (logo + ambiente + fotos).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* -- Cor: tons amostrados diretamente da logo e das fotos -------------- */
+  --marfim:        #FAF6F2;   /* fundo claro principal                     */
+  --marfim-2:      #F4EBE6;   /* fundo claro alternado                     */
+  --areia:         #E9DCD2;   /* fundo quente, bege do piso                */
+  --rosa:          #B17581;   /* cor oficial da logo (amostrada)           */
+  --rosa-medio:    #C997A1;
+  --rosa-claro:    #DEB4BD;
+  --rosa-neon:     #FF8FBF;   /* do letreiro neon do salão                 */
+  --vinho:         #5C2B38;   /* escuro tingido pelo rosa da marca         */
+  --vinho-fundo:   #3F1E28;
+  --vinho-fundo-2: #2E141B;
+  --dourado:       #A98247;   /* das molduras dos espelhos                 */
+  --dourado-claro: #D8BC86;
+  --folhagem:      #33502B;   /* da parede verde                          */
+
+  /* -- Tokens semânticos: as seções trocam o tema, não os componentes --- */
+  --fundo:      var(--marfim);
+  --fundo-alt:  var(--marfim-2);
+  --texto:      #3F1E28;
+  --texto-2:    #7C5B64;
+  --texto-3:    #715A60;   /* rótulos pequenos: 4,7:1 mesmo sobre a areia  */
+  --linha:      rgba(63, 30, 40, 0.14);
+  --linha-forte:rgba(63, 30, 40, 0.28);
+  --acento:     var(--rosa);
+  /* Acento em TEXTO pequeno: escurece o rosa da marca até passar AA.
+     O --rosa continua sendo a cor da casa para formas, traços e filetes. */
+  --acento-texto: #82545D;
+  --superficie: #FFFFFF;
+
+  /* -- Tipografia -------------------------------------------------------- */
+  --fonte-titulo: "Marcellus", "Lora", "Century Schoolbook L", Georgia, "Times New Roman", serif;
+  --fonte-texto:  "Jost", "Poppins", "Lato", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --t-hero:   clamp(2.6rem, 8.4vw, 6.2rem);
+  --t-display:clamp(2.1rem, 5.6vw, 4.2rem);
+  --t-xl:     clamp(1.75rem, 4vw, 3rem);
+  --t-l:      clamp(1.35rem, 2.6vw, 2.05rem);
+  --t-m:      clamp(1.1rem, 1.6vw, 1.35rem);
+  --t-corpo:  clamp(1rem, 0.55vw + 0.87rem, 1.14rem);
+  --t-peq:    0.9rem;
+  --t-micro:  0.72rem;
+
+  --alt-linha: 1.62;   /* corpo      */
+  --alt-titulo:1.06;   /* títulos    */
+  --esp-rotulo:0.22em; /* rótulos caixa-alta */
+
+  /* -- Espaçamento ------------------------------------------------------- */
+  --e-1: 0.5rem;  --e-2: 1rem;   --e-3: 1.5rem;  --e-4: 2rem;
+  --e-5: 3rem;    --e-6: 4rem;   --e-7: 6rem;    --e-8: 8rem;
+  --sec:      clamp(4.5rem, 9vw, 9rem);      /* respiro vertical de seção */
+  --gutter:   clamp(1.25rem, 4.2vw, 3rem);   /* margem lateral            */
+  --container:1280px;
+  --container-estreito: 62ch;
+
+  /* -- Formas: cantos discretos; a curva da marca é o ARCO -------------- */
+  --r-s: 3px;
+  --r-m: 6px;
+  --r-pill: 999px;
+  --arco: 50% 50% 0 0 / 38% 38% 0 0;  /* assinatura visual do salão       */
+
+  /* -- Sombra ------------------------------------------------------------ */
+  --sombra-1: 0 1px 2px rgba(63, 30, 40, 0.05), 0 10px 26px -14px rgba(63, 30, 40, 0.22);
+  --sombra-2: 0 24px 60px -28px rgba(63, 30, 40, 0.40);
+
+  /* -- Movimento --------------------------------------------------------- */
+  --ease-saida: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-suave: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-rap: 0.18s;
+  --dur-med: 0.38s;
+  --dur-lon: 0.78s;
+
+  /* -- Camadas ----------------------------------------------------------- */
+  --z-conteudo: 1;
+  --z-adesivo: 20;
+  --z-cabecalho: 60;
+  --z-menu: 80;
+  --z-modal: 100;
+
+  --altura-cabecalho: 4.5rem;
+  color-scheme: light;
+}
+
+/* Tema escuro: as seções aplicam esta classe e tudo se inverte sozinho. */
+.tema-escuro {
+  --fundo:       var(--vinho-fundo);
+  --fundo-alt:   var(--vinho-fundo-2);
+  --texto:       #F8F0EC;
+  --texto-2:     #CDAFB6;
+  --texto-3:     #AC8993;
+  --linha:       rgba(255, 255, 255, 0.15);
+  --linha-forte: rgba(255, 255, 255, 0.32);
+  --acento:      var(--rosa-claro);
+  --acento-texto: #DEB4BD;   /* sobre o escuro o acento legível é o claro  */
+  --superficie:  #4A2530;
+  --sombra-1:    0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 30px -16px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; padding: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--altura-cabecalho) + 1rem);
+}
+
+body {
+  min-height: 100%;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--t-corpo);
+  font-weight: 300;
+  line-height: var(--alt-linha);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;          /* clip (não hidden) preserva position: sticky */
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  line-height: var(--alt-titulo);
+  text-wrap: balance;
+}
+
+p  { text-wrap: pretty; }
+
+img, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* <picture> aqui é só o invólucro que oferece WebP com reserva JPEG: nunca traz
+   estilo próprio, então não deve gerar caixa. Como `display: contents` afeta só o
+   layout e não o casamento de seletores, os alvos de imagem são escritos como
+   descendentes (`img`), não como filhos diretos. */
+picture { display: contents; }
+
+img { height: auto; }
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+}
+
+button { cursor: pointer; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { list-style: none; }
+
+address { font-style: normal; }
+
+table { border-collapse: collapse; }
+
+[hidden] { display: none !important; }
+
+/* Foco visível e consistente (as referências não faziam — obrigatório aqui) */
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: var(--r-s);
+}
+
+::selection {
+  background: var(--rosa-claro);
+  color: var(--vinho-fundo-2);
+}
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT
+   -------------------------------------------------------------------------- */
+.secao {
+  position: relative;
+  background: var(--fundo);
+  color: var(--texto);
+  padding-block: var(--sec);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container-estreito { max-width: calc(var(--container-estreito) + var(--gutter) * 2); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pular-link {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%, -110%);
+  z-index: var(--z-modal);
+  background: var(--vinho-fundo);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--r-m) var(--r-m);
+  transition: transform var(--dur-rap) var(--ease-suave);
+}
+.pular-link:focus-visible { transform: translate(-50%, 0); }
+
+/* --------------------------------------------------------------------------
+   4. TIPOGRAFIA UTILITÁRIA
+   -------------------------------------------------------------------------- */
+.rotulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--fonte-texto);
+  font-size: var(--t-micro);
+  font-weight: 400;
+  letter-spacing: var(--esp-rotulo);
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.rotulo::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+.rotulo--sem-traco::before { display: none; }
+
+.titulo-display {
+  font-size: var(--t-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.titulo-xl { font-size: var(--t-xl); }
+.titulo-l  { font-size: var(--t-l); }
+
+.texto-guia {
+  font-size: var(--t-m);
+  line-height: 1.55;
+  color: var(--texto-2);
+  max-width: 46ch;
+}
+
+.italico-acento {
+  font-style: italic;
+  font-family: var(--fonte-titulo);
+  color: var(--acento);
+}
+
+.traco-dourado {
+  width: 2.5rem;
+  height: 1px;
+  background: var(--dourado);
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTÕES E AÇÕES
+   -------------------------------------------------------------------------- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;              /* alvo de toque confortável */
+  padding: 0.85rem 1.6rem;
+  font-family: var(--fonte-texto);
+  font-size: var(--t-peq);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--r-s);
+  border: 1px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--dur-med) var(--ease-suave),
+              border-color var(--dur-med) var(--ease-suave),
+              background-color var(--dur-med) var(--ease-suave);
+}
+
+/* Preenchimento por varredura — microinteração discreta e performática */
+.btn > span { position: relative; z-index: 1; }
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-med) var(--ease-saida);
+}
+.btn:hover::before,
+.btn:focus-visible::before { transform: scaleX(1); }
+
+.btn--primario {
+  background: var(--vinho);
+  color: var(--marfim);
+}
+.btn--primario::before { background: var(--rosa-neon); }
+.btn--primario:hover,
+.btn--primario:focus-visible { color: var(--vinho-fundo-2); }
+
+.btn--contorno {
+  border-color: var(--linha-forte);
+  color: var(--texto);
+}
+.btn--contorno::before { background: var(--texto); }
+.btn--contorno:hover,
+.btn--contorno:focus-visible { color: var(--fundo); border-color: var(--texto); }
+
+.btn--claro {
+  background: var(--marfim);
+  color: var(--vinho-fundo);
+}
+.btn--claro::before { background: var(--rosa-neon); }
+.btn--claro:hover,
+.btn--claro:focus-visible { color: var(--vinho-fundo-2); }
+
+.btn--largo { width: 100%; }
+
+.link-seta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: var(--t-peq);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-block: 0.35rem;
+  border-bottom: 1px solid var(--linha);
+  transition: border-color var(--dur-med) var(--ease-suave), color var(--dur-med) var(--ease-suave);
+}
+.link-seta::after {
+  content: "";
+  width: 1.1rem; height: 1px;
+  background: currentColor;
+  transition: width var(--dur-med) var(--ease-saida);
+}
+.link-seta:hover,
+.link-seta:focus-visible { border-color: var(--acento); color: var(--acento); }
+.link-seta:hover::after,
+.link-seta:focus-visible::after { width: 1.9rem; }
+
+/* --------------------------------------------------------------------------
+   6. MOVIMENTO — revelações por IntersectionObserver
+   Todas usam apenas opacity/transform/clip-path (seguro no iOS).
+   -------------------------------------------------------------------------- */
+[data-revelar] {
+  opacity: 0;
+  transform: translate3d(0, 1.4rem, 0);
+  transition: opacity var(--dur-lon) var(--ease-saida),
+              transform var(--dur-lon) var(--ease-saida);
+  transition-delay: var(--atraso, 0ms);
+}
+[data-revelar="esquerda"] { transform: translate3d(-1.6rem, 0, 0); }
+[data-revelar="direita"]  { transform: translate3d(1.6rem, 0, 0); }
+[data-revelar="suave"]    { transform: none; }
+[data-revelar="zoom"] {
+  transform: scale(1.06);
+  opacity: 0;
+  transition-duration: 1.1s;
+}
+
+[data-revelar].visivel {
+  opacity: 1;
+  transform: none;
+}
+
+/* Máscara de linha: o título sobe de dentro de uma janela. */
+.mascara {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.mascara > span {
+  display: block;
+  transform: translate3d(0, 108%, 0);
+  transition: transform 0.95s var(--ease-saida);
+  transition-delay: var(--atraso, 0ms);
+}
+.visivel .mascara > span,
+.mascara.visivel > span { transform: none; }
+
+/* Palavras do hero: revelação escalonada, cada palavra é um inline-block. */
+.palavra {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 0.5em, 0);
+  transition: opacity 0.85s var(--ease-saida), transform 0.85s var(--ease-saida);
+  transition-delay: calc(var(--i, 0) * 90ms + 180ms);
+}
+.visivel .palavra { opacity: 1; transform: none; }
+
+/* Imagem revelada com clip-path (muito mais barato que filtros).
+   A foto fica dentro do <picture>, por isso o alvo não é mais o filho direto. */
+[data-revelar="cortina"] img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.1s var(--ease-saida);
+}
+[data-revelar="cortina"].visivel img { clip-path: inset(0 0 0 0); }
+
+/* --------------------------------------------------------------------------
+   7. IMAGENS
+   -------------------------------------------------------------------------- */
+.moldura {
+  position: relative;
+  overflow: hidden;
+  background: var(--areia);
+}
+/* Enquanto estas fotos não tinham `object-fit` nem `position: absolute` elas
+   ficavam com a proporção natural: um retrato de 800x1018 tomava mais de 1000px
+   de altura dentro de uma caixa de 271px, estourando a seção inteira. */
+.moldura img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--foco, center);
+}
+.moldura--arco { border-radius: var(--arco); }
+.moldura--arco-topo {
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+/* Sobreposição suave para legibilidade de texto sobre foto */
+.veu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.veu--base {
+  background: linear-gradient(to top,
+    rgba(46, 20, 27, 0.78) 0%,
+    rgba(46, 20, 27, 0.34) 38%,
+    rgba(46, 20, 27, 0.02) 68%);
+}
+
+/* --------------------------------------------------------------------------
+   8. MARQUEE — animação contínua, pausável e respeitando reduced-motion
+   -------------------------------------------------------------------------- */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee__trilha {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--e-5);
+  padding-right: var(--e-5);
+  min-width: 100%;
+  animation: marquee 46s linear infinite;
+}
+.marquee--reverso .marquee__trilha { animation-direction: reverse; }
+.marquee:hover .marquee__trilha { animation-play-state: paused; }
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-100%, 0, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   9. PREFERÊNCIAS DO USUÁRIO
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Nada pode ficar invisível por causa de animação desativada. */
+  [data-revelar],
+  .palavra,
+  .mascara > span,
+  [data-revelar="cortina"] img {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+
+  .marquee__trilha { animation: none; }
+}
+
+/* Contraste e legibilidade em telas muito claras / modo alto contraste */
+@media (prefers-contrast: more) {
+  :root { --texto-2: #5E3A44; --texto-3: #6E4A54; --linha: rgba(63, 30, 40, 0.35); }
+}

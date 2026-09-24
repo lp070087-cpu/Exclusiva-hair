@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exclusiva Hair · Salão Olinda — Apresentação</title>
+<meta name="description" content="Exclusiva Hair — salão em Olinda, referência em alisamentos e tratamentos personalizados. Liso saudável é nossa assinatura. Apresentação da nova experiência digital.">
+<meta name="theme-color" content="#FAF6F2">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exclusiva Hair · Salão Olinda">
+<meta property="og:description" content="Referência em alisamentos e tratamentos personalizados. Liso saudável é nossa assinatura.">
+<meta property="og:image" content="assets/img/og-exclusiva-hair.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="canonical" href="./">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Marcellus&display=swap">
+
+<link rel="preload" as="image" href="assets/img/salao-01-800.webp" type="image/webp">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/secoes.css">
+
+<!-- Sem JavaScript a apresentação continua inteira: as revelações por scroll
+     nascem em opacity:0 e só o JS as mostra, então aqui todas viram visíveis.
+     O painel fixo de serviços só troca de foto por JS, então fica fora; sem ele
+     a foto de cada serviço continua na lista, que é o caminho nativo. -->
+<noscript>
+  <style>
+    [data-revelar], .palavra, .mascara > span { opacity: 1 !important; transform: none !important; }
+    [data-revelar] img, [data-revelar="cortina"] img { clip-path: none !important; }
+    .servicos__palco { display: none !important; }
+    .servico__imagem { display: block !important; }
+    .botao-menu, .menu-mobile { display: none !important; }
+  </style>
+</noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Exclusiva Hair",
+  "description": "Referência em alisamentos e tratamentos personalizados. Liso saudável é nossa assinatura.",
+  "areaServed": "Olinda, PE",
+  "image": "assets/img/og-exclusiva-hair.jpg",
+  "sameAs": ["https://www.instagram.com/exclusivahair__/"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }]
+}
+</script>
+</head>
+<body>
+
+<a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- =====================================================================
+     CABEÇALHO
+     ===================================================================== -->
+<header class="cabecalho" id="cabecalho">
+  <div class="container cabecalho__interno">
+    <a class="marca" href="#inicio" aria-label="Exclusiva Hair — início">
+      <img class="marca__simbolo" src="assets/img/simbolo-branco.png" alt="" width="368" height="240" aria-hidden="true">
+      <span class="marca__texto">Exclusiva<small>Hair · Olinda</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="#o-salao">O salão</a></li>
+        <li><a class="nav__link" href="#servicos">Serviços</a></li>
+        <li><a class="nav__link" href="#ritual">Experiência</a></li>
+        <li><a class="nav__link" href="#ambiente">Ambiente</a></li>
+        <li><a class="nav__link" href="#contato">Contato</a></li>
+      </ul>
+      <div class="cabecalho__acoes">
+        <a class="btn btn--primario" href="#agendamento"><span>Agendar</span></a>
+      </div>
+      <button class="botao-menu" type="button" id="botao-menu"
+              aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+        <span class="botao-menu__barras" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Menu mobile -->
+<div class="menu-mobile" id="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu de navegação" hidden>
+  <button class="menu-mobile__fechar" type="button" id="menu-fechar" aria-label="Fechar menu">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <ul class="menu-mobile__lista">
+    <li><a class="menu-mobile__link" href="#o-salao"><span class="menu-mobile__num">01</span>O salão</a></li>
+    <li><a class="menu-mobile__link" href="#servicos"><span class="menu-mobile__num">02</span>Serviços</a></li>
+    <li><a class="menu-mobile__link" href="#produtos"><span class="menu-mobile__num">03</span>Procedimentos</a></li>
+    <li><a class="menu-mobile__link" href="#ritual"><span class="menu-mobile__num">04</span>Experiência</a></li>
+    <li><a class="menu-mobile__link" href="#ambiente"><span class="menu-mobile__num">05</span>Ambiente</a></li>
+    <li><a class="menu-mobile__link" href="#agendamento"><span class="menu-mobile__num">06</span>Agendar</a></li>
+    <li><a class="menu-mobile__link" href="#contato"><span class="menu-mobile__num">07</span>Contato</a></li>
+  </ul>
+  <div class="menu-mobile__rodape">
+    <a class="btn btn--claro" href="#agendamento"><span>Agendar atendimento</span></a>
+    <span>Seg a Sáb · 9h às 18h · Olinda, PE</span>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<section class="hero" id="inicio">
+  <span class="hero__arco" aria-hidden="true"></span>
+  <span class="hero__arco hero__arco--interno" aria-hidden="true"></span>
+
+  <div class="container hero__grade" data-revelar>
+    <div class="hero__texto">
+      <p class="rotulo">Salão em Olinda · atendimento de segunda a sábado</p>
+
+      <h1 class="hero__titulo">
+        <span class="mascara"><span>Você sempre</span></span>
+        <span class="mascara"><span><em>linda</em> e</span></span>
+        <span class="mascara"><span>exclusiva.</span></span>
+      </h1>
+
+      <p class="hero__linha-assinatura">
+        <span>Referência em alisamentos e</span> <b>tratamentos personalizados</b>
+      </p>
+
+      <p class="texto-guia">
+        Um salão pensado para o seu cabelo — e para o seu tempo. Aqui o liso saudável
+        não é promessa de vitrine: é a nossa assinatura.
+      </p>
+
+      <div class="hero__acoes">
+        <a class="btn btn--primario" href="#agendamento">
+          <span>Agendar meu horário</span>
+        </a>
+        <a class="link-seta" href="#servicos">Ver os serviços</a>
+      </div>
+    </div>
+
+    <div class="hero__midia">
+      <figure class="moldura moldura--arco hero__midia-principal">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/salao-01-800.webp 800w, assets/img/salao-01-1600.webp 1600w"
+                  sizes="(min-width: 900px) 32vw, 62vw">
+          <img src="assets/img/salao-01-800.jpg"
+               srcset="assets/img/salao-01-800.jpg 800w, assets/img/salao-01-1600.jpg 1600w"
+               sizes="(min-width: 900px) 32vw, 62vw"
+               width="800" height="814"
+               fetchpriority="high" decoding="async"
+               alt="Interior do Exclusiva Hair: cadeiras rosas enfileiradas sob um arco de luz neon com os dizeres “Você sempre linda e exclusiva”.">
+        </picture>
+      </figure>
+
+      <figure class="moldura hero__midia-secundaria">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/real-04-800.webp 800w"
+                  sizes="(min-width: 900px) 20vw, 34vw">
+          <img src="assets/img/real-04-800.jpg"
+               srcset="assets/img/real-04-800.jpg 800w"
+               sizes="(min-width: 900px) 20vw, 34vw"
+               width="800" height="1050"
+               loading="lazy" decoding="async"
+               style="--foco: 42% 40%"
+               alt="Cliente recebendo massagem no couro cabeludo durante a lavagem, com a parede verde do salão ao fundo.">
+        </picture>
+      </figure>
+
+      <div class="hero__selo" aria-hidden="true">
+        <div>
+          <b>9.548</b>
+          <span>seguidores</span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="hero__fatos">
+      <li class="hero__fato"><b>Seg a Sáb</b><span>9h às 18h</span></li>
+      <li class="hero__fato"><b>Alisamentos</b><span>a nossa especialidade</span></li>
+      <li class="hero__fato"><b>Olinda · PE</b><span>atendimento presencial</span></li>
+    </ul>
+  </div>
+
+  <div class="hero__rolar" aria-hidden="true">
+    <span>Role</span>
+    <span class="hero__rolar-linha"></span>
+  </div>
+</section>
+
+<!-- =====================================================================
+     FAIXA MARQUEE
+     ===================================================================== -->
+<div class="faixa" aria-hidden="true">
+  <div class="marquee" data-marquee>
+    <div class="marquee__trilha">
+      <span class="faixa__item">Alisamentos<i>◆</i></span>
+      <span class="faixa__item">Tratamentos personalizados<i>◆</i></span>
+      <span class="faixa__item">Cronograma capilar<i>◆</i></span>
+      <span class="faixa__item">Óleo perfumado<i>◆</i></span>
+      <span class="faixa__item">Cabelo S.O.S<i>◆</i></span>
+      <span class="faixa__item">Detox capilar<i>◆</i></span>
+      <span class="faixa__item">Você sempre linda e exclusiva<i>◆</i></span>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     MANIFESTO
+     ===================================================================== -->
+<section class="secao" id="o-salao">
+  <div class="container">
+    <div class="manifesto__topo">
+      <div data-revelar="esquerda">
+        <p class="rotulo">O salão</p>
+        <p class="manifesto__citacao">Liso saudável é a nossa assinatura — e cada fio tem um <em>plano próprio</em>.</p>
+      </div>
+      <div data-revelar="direita" style="--atraso:120ms">
+        <p class="texto-guia">
+          O Exclusiva Hair nasceu com uma especialidade clara: alisamento e tratamento
+          personalizado. É o que fazemos, é o que estudamos, é o que repetimos todos os
+          dias, cadeira por cadeira, fio por fio.
+        </p>
+        <p class="texto-guia" style="margin-block-start:1rem">
+          O resultado você conhece pelo Instagram. Esta apresentação mostra como esse
+          mesmo cuidado pode virar também uma experiência digital — do primeiro clique
+          até o horário confirmado.
+        </p>
+      </div>
+    </div>
+
+    <div class="manifesto__grade">
+      <div class="manifesto__numeros" data-revelar="suave">
+        <div class="manifesto__numero">
+          <b data-contar="9548">9.548</b>
+          <span>seguidores acompanhando o salão</span>
+        </div>
+        <div class="manifesto__numero">
+          <b data-contar="175">175</b>
+          <span>publicações no Instagram</span>
+        </div>
+        <div class="manifesto__numero">
+          <b>6</b>
+          <span>dias por semana — de segunda a sábado</span>
+        </div>
+        <div class="manifesto__numero">
+          <b>9h–18h</b>
+          <span>o horário em que a porta está aberta</span>
+        </div>
+      </div>
+
+      <div class="manifesto__pilares">
+        <article class="pilar" data-revelar="direita">
+          <span class="pilar__num">I</span>
+          <h3>Especialidade, não cardápio infinito</h3>
+          <p>Alisamento e tratamento personalizado. A casa é conhecida pelo que faz bem feito, e isso define cada protocolo aplicado.</p>
+        </article>
+        <article class="pilar" data-revelar="direita" style="--atraso:100ms">
+          <span class="pilar__num">II</span>
+          <h3>Diagnóstico antes do produto</h3>
+          <p>O tratamento é montado a partir do fio que chega — não de uma tabela fixa. É por isso que o resultado sustenta a assinatura.</p>
+        </article>
+        <article class="pilar" data-revelar="direita" style="--atraso:200ms">
+          <span class="pilar__num">III</span>
+          <h3>Produtos profissionais</h3>
+          <p>O trabalho é feito com a linha AGL Professional — a mesma que aparece nos bastidores do perfil, do cronograma ao óleo perfumado.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SERVIÇOS — lista editorial interativa
+     ===================================================================== -->
+<section class="secao servicos" id="servicos">
+  <div class="container">
+    <div class="servicos__cabecalho">
+      <div data-revelar="esquerda">
+        <p class="rotulo">Serviços</p>
+        <h2 class="titulo-display">O que a casa faz</h2>
+      </div>
+      <p class="texto-guia" data-revelar="direita" style="--atraso:100ms">
+        Toque em cada item para ver o que está incluído. Nenhum preço é exibido aqui:
+        os valores são informados no atendimento, porque cada protocolo depende do seu fio.
+      </p>
+    </div>
+
+    <div class="servicos__grade">
+      <div class="servicos__lista" data-servicos>
+
+        <!-- 01 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-1" data-imagem="real-01">
+          <span class="servico__num">01</span>
+          <span class="servico__nome">Alisamento</span>
+          <span class="servico__meta">A especialidade da casa, do fio rebelde ao liso saudável.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-1">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/real-01-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/real-01-800.jpg" width="800" height="1018" loading="lazy" decoding="async"
+                       alt="Cabelo loiro ondulado finalizado no salão, com a capa AGL Professional e o produto de tratamento ao lado.">
+                </picture>
+              </figure>
+              <p>É o serviço que define o Exclusiva Hair. O alisamento é conduzido para preservar a saúde do fio: a escolha da técnica e da força do produto vem depois de avaliar a condição do seu cabelo, nunca antes.</p>
+              <p>O objetivo declarado pela casa é simples e direto — <em class="italico-acento">liso saudável</em>, com movimento, brilho e o cabelo inteiro no fim do processo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-2" data-imagem="real-04">
+          <span class="servico__num">02</span>
+          <span class="servico__nome">Tratamentos personalizados</span>
+          <span class="servico__meta">Um protocolo montado para o seu fio, não para uma tabela.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-2">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/real-04-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/real-04-800.jpg" width="800" height="1050" loading="lazy" decoding="async"
+                       style="--foco: 42% 40%"
+                       alt="Cliente deitada na lavatório recebendo massagem no couro cabeludo, com toalha rosa e parede de folhagem ao fundo.">
+                </picture>
+              </figure>
+              <p>Tratamento personalizado é o segundo nome da casa. Aqui o protocolo é desenhado a partir da avaliação do fio: o que ele precisa hoje, e o que precisa ao longo das semanas.</p>
+              <p>É o serviço que sustenta a assinatura do salão — e o motivo pelo qual o resultado se mantém entre uma visita e outra.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-3" data-imagem="real-02">
+          <span class="servico__num">03</span>
+          <span class="servico__nome">Cronograma capilar</span>
+          <span class="servico__meta">Etapas programadas de tratamento, com produtos AGL Professional.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-3">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/real-02-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/real-02-800.jpg" width="800" height="814" loading="lazy" decoding="async"
+                       alt="Profissional do salão segurando o pote do produto AGL Professional EX Clusiva Cronotox 3 em 1 Orgânico.">
+                </picture>
+              </figure>
+              <p>O cronograma organiza o tratamento em etapas ao longo do tempo — hidratação, nutrição e reconstrução — em vez de concentrar tudo em uma única visita.</p>
+              <p>No salão ele aparece com a linha <strong>AGL Professional EX Clusiva Cronotox 3 em 1 Orgânico</strong>, o produto que você vê nos bastidores do perfil.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-4" data-imagem="real-05">
+          <span class="servico__num">04</span>
+          <span class="servico__nome">Lavagem, hidratação e massagem</span>
+          <span class="servico__meta">O momento mais relaxante da visita — e o que prepara o fio.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-4">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/real-05-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/real-05-800.jpg" width="800" height="916" loading="lazy" decoding="async"
+                       alt="Lavagem no lavatório com aplicação de produto e massagem no couro cabeludo com escova de silicone.">
+                </picture>
+              </figure>
+              <p>A lavagem no salão vai muito além de molhar o cabelo: é massagem no couro cabeludo, produto aplicado com tempo e o fio preparado para receber o tratamento.</p>
+              <p>É a parte da visita que as clientes descrevem como o momento de desligar do resto do dia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-5" data-imagem="salao-04">
+          <span class="servico__num">05</span>
+          <span class="servico__nome">Óleo perfumado</span>
+          <span class="servico__meta">Finalização que deixa fragrância e brilho no fio.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-5">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/salao-04-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/salao-04-800.jpg" width="800" height="844" loading="lazy" decoding="async"
+                       alt="Prateleiras e nichos iluminados do salão com produtos de tratamento e finalização alinhados.">
+                </picture>
+              </figure>
+              <p>A finalização com óleo perfumado fecha o atendimento. É o passo que entrega o brilho imediato e a fragrância que acompanha você depois de sair do salão.</p>
+              <p>Um detalhe pequeno no processo e grande na sensação de sair pronta.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-6" data-imagem="salao-02">
+          <span class="servico__num">06</span>
+          <span class="servico__nome">Cabelo S.O.S</span>
+          <span class="servico__meta">Para quando o fio pede cuidado imediato.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-6">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/salao-02-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/salao-02-800.jpg" width="800" height="836" loading="lazy" decoding="async"
+                       alt="Área de lavagem do salão com lavatórios brancos e cadeiras rosas diante da parede verde de folhagem.">
+                </picture>
+              </figure>
+              <p>Um atendimento dedicado a fios que chegaram ao limite — ressecamento, quebra ou dano acumulado por químicas anteriores.</p>
+              <p>O foco aqui é estabilizar o cabelo antes de pensar em qualquer transformação maior.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <button class="servico" type="button" aria-expanded="false" aria-controls="serv-7" data-imagem="salao-06">
+          <span class="servico__num">07</span>
+          <span class="servico__nome">Detox capilar</span>
+          <span class="servico__meta">Limpeza profunda para devolver leveza aos fios.</span>
+          <span class="servico__abrir" aria-hidden="true"></span>
+        </button>
+        <div class="servico__detalhe" id="serv-7">
+          <div>
+            <div class="servico__detalhe-conteudo">
+              <figure class="moldura servico__imagem">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/salao-06-800.webp 800w" sizes="(min-width:900px) 46vw, 92vw">
+                  <img src="assets/img/salao-06-800.jpg" width="800" height="827" loading="lazy" decoding="async"
+                       alt="Espelho em arco com moldura dourada e nichos iluminados com produtos, no interior do salão.">
+                </picture>
+              </figure>
+              <p>O detox remove o acúmulo de resíduos que pesa no cabelo — produto, poluição, excesso de finalizador — e devolve leveza ao fio.</p>
+              <p>Costuma ser o primeiro passo antes de um cronograma, justamente para o tratamento seguinte render mais.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="servicos__palco" aria-hidden="true">
+        <picture><source type="image/webp" srcset="assets/img/real-01-800.webp"><img src="assets/img/real-01-800.jpg" data-palco="real-01" class="ativa" width="800" height="1018" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/real-04-800.webp"><img src="assets/img/real-04-800.jpg" data-palco="real-04" width="800" height="1050" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/real-02-800.webp"><img src="assets/img/real-02-800.jpg" data-palco="real-02" width="800" height="814" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/real-05-800.webp"><img src="assets/img/real-05-800.jpg" data-palco="real-05" width="800" height="916" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/salao-04-800.webp"><img src="assets/img/salao-04-800.jpg" data-palco="salao-04" width="800" height="844" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/salao-02-800.webp"><img src="assets/img/salao-02-800.jpg" data-palco="salao-02" width="800" height="836" loading="lazy" decoding="async" alt=""></picture>
+        <picture><source type="image/webp" srcset="assets/img/salao-06-800.webp"><img src="assets/img/salao-06-800.jpg" data-palco="salao-06" width="800" height="827" loading="lazy" decoding="async" alt=""></picture>
+        <span class="servicos__palco-legenda" data-palco-legenda>Alisamento</span>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PROCEDIMENTOS / PRODUTOS — trilho horizontal com toque nativo
+     ===================================================================== -->
+<section class="secao procedimentos" id="produtos">
+  <div class="container">
+    <div class="procedimentos__cabecalho">
+      <div data-revelar="esquerda">
+        <p class="rotulo">Procedimentos em destaque</p>
+        <h2 class="titulo-display">Os que mais aparecem por aqui</h2>
+      </div>
+      <p class="texto-guia" data-revelar="direita" style="--atraso:100ms">
+        Os mesmos procedimentos que o salão mostra no perfil — agora organizados como
+        parte da experiência de escolha.
+      </p>
+    </div>
+  </div>
+
+  <div class="procedimentos__trilho" role="list" data-arrastar>
+    <article class="procedimento" role="listitem" data-revelar="suave">
+      <figure class="moldura procedimento__imagem">
+        <picture>
+          <source type="image/webp" srcset="assets/img/real-02-800.webp 800w" sizes="(min-width:900px) 19rem, 74vw">
+          <img src="assets/img/real-02-800.jpg" width="800" height="814" loading="lazy" decoding="async"
+               alt="Pote do produto AGL Professional EX Clusiva Cronotox 3 em 1 Orgânico, 1 kg, segurado por uma profissional do salão.">
+        </picture>
+      </figure>
+      <h3>Cronograma turbinado</h3>
+      <p>Cronograma capilar em etapas, com a linha AGL Professional EX Clusiva.</p>
+    </article>
+
+    <article class="procedimento" role="listitem" data-revelar="suave" style="--atraso:80ms">
+      <figure class="moldura procedimento__imagem">
+        <picture>
+          <source type="image/webp" srcset="assets/img/real-05-800.webp 800w" sizes="(min-width:900px) 19rem, 74vw">
+          <img src="assets/img/real-05-800.jpg" width="800" height="916" loading="lazy" decoding="async"
+               alt="Aplicação de produto de tratamento durante a lavagem, com escova de silicone massageando o couro cabeludo.">
+        </picture>
+      </figure>
+      <h3>Detox capilar</h3>
+      <p>Limpeza profunda dos fios antes de iniciar o tratamento.</p>
+    </article>
+
+    <article class="procedimento" role="listitem" data-revelar="suave" style="--atraso:160ms">
+      <figure class="moldura procedimento__imagem">
+        <picture>
+          <source type="image/webp" srcset="assets/img/real-01-800.webp 800w" sizes="(min-width:900px) 19rem, 74vw">
+          <img src="assets/img/real-01-800.jpg" width="800" height="1018" loading="lazy" decoding="async"
+               alt="Cabelo loiro com ondas finalizadas e muito brilho, visto por trás durante a escovação.">
+        </picture>
+      </figure>
+      <h3>Óleo perfumado</h3>
+      <p>Finalização com óleo perfumado ao fim do atendimento.</p>
+    </article>
+
+    <article class="procedimento" role="listitem" data-revelar="suave" style="--atraso:240ms">
+      <figure class="moldura procedimento__imagem">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-02-800.webp 800w" sizes="(min-width:900px) 19rem, 74vw">
+          <img src="assets/img/salao-02-800.jpg" width="800" height="836" loading="lazy" decoding="async"
+               alt="Área de lavagem do salão, com lavatórios brancos e a parede verde de folhagem.">
+        </picture>
+      </figure>
+      <h3>Cabelo S.O.S</h3>
+      <p>Atendimento voltado a fios que precisam de cuidado imediato.</p>
+    </article>
+  </div>
+
+  <div class="container">
+    <p class="arrastar-dica" aria-hidden="true">Arraste para o lado</p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     RITUAL / EXPERIÊNCIA — seção escura
+     ===================================================================== -->
+<section class="secao tema-escuro ritual" id="ritual">
+  <div class="container">
+    <div class="ritual__cabecalho" data-revelar>
+      <p class="rotulo">A experiência</p>
+      <h2 class="titulo-display">Seu momento começa aqui</h2>
+      <p class="texto-guia">
+        O caminho que o seu cabelo percorre dentro do salão, do primeiro enxágue ao
+        último fio seco — na ordem em que acontece no atendimento.
+      </p>
+    </div>
+
+    <div class="ritual__grade">
+      <div class="ritual__etapas">
+        <article class="etapa" data-revelar="esquerda">
+          <span class="etapa__num">01</span>
+          <div>
+            <h3>Avaliação do fio</h3>
+            <p>Antes de qualquer produto, o cabelo é avaliado. É dessa leitura que sai o protocolo — e não de uma tabela fixa de serviços.</p>
+          </div>
+        </article>
+        <article class="etapa" data-revelar="esquerda" style="--atraso:100ms">
+          <span class="etapa__num">02</span>
+          <div>
+            <h3>Lavagem e massagem</h3>
+            <p>O lavatório do salão faz parte do tratamento: massagem no couro cabeludo, produto aplicado com tempo e o fio preparado para o que vem depois.</p>
+          </div>
+        </article>
+        <article class="etapa" data-revelar="esquerda" style="--atraso:200ms">
+          <span class="etapa__num">03</span>
+          <div>
+            <h3>O protocolo em ação</h3>
+            <p>Alisamento, cronograma capilar ou tratamento pontual, conduzido com a linha AGL Professional e com atenção à saúde do fio.</p>
+          </div>
+        </article>
+        <article class="etapa" data-revelar="esquerda" style="--atraso:300ms">
+          <span class="etapa__num">04</span>
+          <div>
+            <h3>Finalização</h3>
+            <p>Escova, brilho e óleo perfumado. Você sai com o cabelo pronto e com a orientação de como manter o resultado em casa.</p>
+          </div>
+        </article>
+      </div>
+
+      <figure class="moldura ritual__foto" data-revelar="cortina">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/salao-05-800.webp 800w, assets/img/salao-05-1600.webp 1600w"
+                  sizes="(min-width:900px) 34vw, 92vw">
+          <img src="assets/img/salao-05-800.jpg"
+               srcset="assets/img/salao-05-800.jpg 800w, assets/img/salao-05-1600.jpg 1600w"
+               sizes="(min-width:900px) 34vw, 92vw"
+               width="800" height="854" loading="lazy" decoding="async"
+               alt="Arco de luz neon com a frase “Você sempre linda e exclusiva” sobre um sofá curvo rosa e uma planta alta.">
+        </picture>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     AMBIENTE — mosaico editorial
+     ===================================================================== -->
+<section class="secao ambiente" id="ambiente">
+  <div class="container">
+    <div class="ambiente__cabecalho">
+      <div data-revelar="esquerda">
+        <p class="rotulo">O ambiente</p>
+        <h2 class="titulo-display">Um lugar que já faz parte do resultado</h2>
+      </div>
+      <p class="texto-guia" data-revelar="direita" style="--atraso:100ms">
+        Arcos, luz quente, folhagem e o rosa da casa. Cada detalhe do espaço foi pensado
+        para que a visita seja, além de um serviço, um tempo só seu.
+      </p>
+    </div>
+
+    <div class="ambiente__galeria">
+      <figure class="ambiente__peca" data-revelar="cortina">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-05-800.webp 800w, assets/img/salao-05-1600.webp 1600w" sizes="(min-width:768px) 42vw, 78vw">
+          <img src="assets/img/salao-05-800.jpg" srcset="assets/img/salao-05-800.jpg 800w, assets/img/salao-05-1600.jpg 1600w" sizes="(min-width:768px) 42vw, 78vw" width="800" height="854" loading="lazy" decoding="async" alt="Arco de luz neon com a frase “Você sempre linda e exclusiva”, sofá curvo rosa e planta ao lado.">
+        </picture>
+        <figcaption>O arco de neon da casa</figcaption>
+      </figure>
+
+      <figure class="ambiente__peca" data-revelar="cortina" style="--atraso:80ms">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-03-800.webp 800w, assets/img/salao-03-1600.webp 1600w" sizes="(min-width:768px) 30vw, 78vw">
+          <img src="assets/img/salao-03-800.jpg" srcset="assets/img/salao-03-800.jpg 800w, assets/img/salao-03-1600.jpg 1600w" sizes="(min-width:768px) 30vw, 78vw" width="800" height="851" loading="lazy" decoding="async" alt="Fileira de cadeiras rosas diante dos espelhos em arco com moldura dourada.">
+        </picture>
+        <figcaption>Espelhos em arco e moldura dourada</figcaption>
+      </figure>
+
+      <figure class="ambiente__peca" data-revelar="cortina" style="--atraso:160ms">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-07-800.webp 800w, assets/img/salao-07-1600.webp 1600w" sizes="(min-width:768px) 22vw, 78vw">
+          <img src="assets/img/salao-07-800.jpg" srcset="assets/img/salao-07-800.jpg 800w, assets/img/salao-07-1600.jpg 1600w" sizes="(min-width:768px) 22vw, 78vw" width="800" height="855" loading="lazy" decoding="async" alt="Balcão de recepção com a logo Exclusiva Hair iluminada dentro de um nicho em arco.">
+        </picture>
+        <figcaption>A recepção e a logo iluminada</figcaption>
+      </figure>
+
+      <figure class="ambiente__peca" data-revelar="cortina" style="--atraso:240ms">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-02-800.webp 800w, assets/img/salao-02-1600.webp 1600w" sizes="(min-width:768px) 22vw, 78vw">
+          <img src="assets/img/salao-02-800.jpg" srcset="assets/img/salao-02-800.jpg 800w, assets/img/salao-02-1600.jpg 1600w" sizes="(min-width:768px) 22vw, 78vw" width="800" height="836" loading="lazy" decoding="async" alt="Área de lavagem com lavatórios brancos, cadeiras rosas e a parede coberta de folhagem verde.">
+        </picture>
+        <figcaption>A área de lavagem</figcaption>
+      </figure>
+
+      <figure class="ambiente__peca" data-revelar="cortina" style="--atraso:320ms">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-04-800.webp 800w, assets/img/salao-04-1600.webp 1600w" sizes="(min-width:768px) 40vw, 78vw">
+          <img src="assets/img/salao-04-800.jpg" srcset="assets/img/salao-04-800.jpg 800w, assets/img/salao-04-1600.jpg 1600w" sizes="(min-width:768px) 40vw, 78vw" width="800" height="844" loading="lazy" decoding="async" alt="Salão com cadeiras rosas, nichos em arco iluminados com produtos e a janela com vista para a cidade.">
+        </picture>
+        <figcaption>Os nichos e a vista da cidade</figcaption>
+      </figure>
+
+      <figure class="ambiente__peca" data-revelar="cortina" style="--atraso:400ms">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-06-800.webp 800w, assets/img/salao-06-1600.webp 1600w" sizes="(min-width:768px) 40vw, 78vw">
+          <img src="assets/img/salao-06-800.jpg" srcset="assets/img/salao-06-800.jpg 800w, assets/img/salao-06-1600.jpg 1600w" sizes="(min-width:768px) 40vw, 78vw" width="800" height="827" loading="lazy" decoding="async" alt="Cadeira rosa posicionada em frente ao espelho em arco, com prateleiras de produtos iluminadas ao fundo.">
+        </picture>
+        <figcaption>A cadeira, o espelho e o seu tempo</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     RESULTADOS
+     ===================================================================== -->
+<section class="secao resultados" id="resultados">
+  <div class="container">
+    <div class="resultados__grade">
+      <figure class="moldura resultados__principal" data-revelar="cortina">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/img/real-01-800.webp 800w, assets/img/real-01-1600.webp 1600w"
+                  sizes="(min-width:900px) 44vw, 92vw">
+          <img src="assets/img/real-01-800.jpg"
+               srcset="assets/img/real-01-800.jpg 800w, assets/img/real-01-1600.jpg 1600w"
+               sizes="(min-width:900px) 44vw, 92vw"
+               width="800" height="1018" loading="lazy" decoding="async"
+               alt="Resultado de alisamento: cabelo loiro com ondas definidas, brilho intenso e movimento, finalizado no salão.">
+        </picture>
+      </figure>
+
+      <div>
+        <p class="rotulo" data-revelar="esquerda">Resultados</p>
+        <h2 class="titulo-display" data-revelar="esquerda" style="margin-block:0.6rem 1.4rem">O que a casa entrega</h2>
+
+        <div class="resultados__lista">
+          <article class="resultado">
+            <span class="resultado__marca" aria-hidden="true"></span>
+            <h3>Liso com movimento</h3>
+            <p>O alisamento da casa não busca o fio chapado: busca o liso saudável, com brilho e movimento natural.</p>
+          </article>
+          <article class="resultado">
+            <span class="resultado__marca" aria-hidden="true"></span>
+            <h3>Fio recuperado</h3>
+            <p>Tratamentos que devolvem condição ao cabelo antes de qualquer transformação maior.</p>
+          </article>
+          <article class="resultado">
+            <span class="resultado__marca" aria-hidden="true"></span>
+            <h3>Resultado que se mantém</h3>
+            <p>Com o cronograma em dia e a orientação certa para casa, o efeito dura entre uma visita e outra.</p>
+          </article>
+          <article class="resultado">
+            <span class="resultado__marca" aria-hidden="true"></span>
+            <h3>Rotina que caiba na sua vida</h3>
+            <p>Atendimento de segunda a sábado, das 9h às 18h, em Olinda.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     INSTAGRAM
+     ===================================================================== -->
+<section class="secao instagram" id="instagram">
+  <div class="container">
+    <div class="instagram__cabecalho">
+      <div data-revelar="esquerda">
+        <p class="rotulo">Do Instagram para o salão</p>
+        <a class="instagram__perfil" href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer" style="margin-block-start:0.75rem">
+          <img src="assets/img/logo-rosa.png" width="240" height="240" loading="lazy" decoding="async" alt="Logo do Exclusiva Hair.">
+          <span>
+            <b>@exclusivahair__</b>
+            <span>9.548 seguidores · 175 publicações</span>
+          </span>
+        </a>
+      </div>
+      <a class="btn btn--contorno" href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer" data-revelar="direita">
+        <span>Abrir o perfil</span>
+      </a>
+    </div>
+
+    <div class="instagram__grade">
+      <a class="post-instagram" href="https://www.instagram.com/p/DUWlvsiEeCM/" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source type="image/webp" srcset="assets/img/salao-01-800.webp 800w" sizes="(min-width:768px) 30vw, 64vw">
+          <img src="assets/img/salao-01-800.jpg" width="800" height="814" loading="lazy" decoding="async" alt="Interior do Exclusiva Hair com o arco de neon aceso.">
+        </picture>
+        <span class="post-instagram__veu">Ver publicação · 01</span>
+      </a>
+      <a class="post-instagram" href="https://www.instagram.com/p/DZSfX91MGnn/" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source type="image/webp" srcset="assets/img/real-05-800.webp 800w" sizes="(min-width:768px) 30vw, 64vw">
+          <img src="assets/img/real-05-800.jpg" width="800" height="916" loading="lazy" decoding="async" alt="Aplicação de produto durante a lavagem no salão.">
+        </picture>
+        <span class="post-instagram__veu">Ver publicação · 02</span>
+      </a>
+      <a class="post-instagram" href="https://www.instagram.com/p/DVZbKJEAQk7/" target="_blank" rel="noopener noreferrer">
+        <picture>
+          <source type="image/webp" srcset="assets/img/real-02-800.webp 800w" sizes="(min-width:768px) 30vw, 64vw">
+          <img src="assets/img/real-02-800.jpg" width="800" height="814" loading="lazy" decoding="async" alt="Produto AGL Professional EX Clusiva Cronotox mostrado no salão.">
+        </picture>
+        <span class="post-instagram__veu">Ver publicação · 03</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     AGENDAMENTO — demonstração navegável
+     ===================================================================== -->
+<section class="secao agendamento" id="agendamento">
+  <div class="container">
+    <div class="agendamento__cabecalho" data-revelar>
+      <p class="rotulo">Agendamento</p>
+      <h2 class="titulo-display">Como seria agendar em três toques</h2>
+      <p class="texto-guia">
+        Esta é uma demonstração navegável do fluxo de agendamento proposto para a nova
+        experiência digital. Você pode clicar e experimentar agora — nenhum dado é
+        enviado, nenhum horário é reservado de verdade.
+      </p>
+    </div>
+
+    <div class="painel" data-agendamento data-revelar="suave">
+      <div class="painel__topo">
+        <span class="painel__selo">Demonstração</span>
+        <span class="painel__contador" data-contador>Passo 1 de 5</span>
+      </div>
+
+      <div class="painel__corpo">
+        <ol class="passos" role="list">
+          <li class="passo-marca" data-passo="1" data-estado="atual"><i>1</i> Serviço</li>
+          <li class="passo-marca" data-passo="2"><i>2</i> Data</li>
+          <li class="passo-marca" data-passo="3"><i>3</i> Horário</li>
+          <li class="passo-marca" data-passo="4"><i>4</i> Seus dados</li>
+          <li class="passo-marca" data-passo="5"><i>5</i> Resumo</li>
+        </ol>
+
+        <!-- Etapa 1 -->
+        <div class="painel__etapa ativa" data-etapa="1">
+          <h3 class="painel__titulo">Escolha o serviço</h3>
+          <p class="painel__nota">Os serviços abaixo são os reais oferecidos pelo salão.</p>
+          <div class="escolhas" data-escolhas-servico role="group" aria-label="Escolha o serviço"></div>
+          <p class="campo__erro" data-erro="1" role="alert"></p>
+        </div>
+
+        <!-- Etapa 2 -->
+        <div class="painel__etapa" data-etapa="2">
+          <h3 class="painel__titulo">Escolha a data</h3>
+          <p class="painel__nota">O salão atende de segunda a sábado. Domingos não abrem.</p>
+          <div class="calendario">
+            <div class="calendario__topo">
+              <span class="calendario__mes" data-mes>—</span>
+              <div class="calendario__nav">
+                <button class="botao-icone" type="button" data-mes-anterior aria-label="Mês anterior">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+                </button>
+                <button class="botao-icone" type="button" data-mes-seguinte aria-label="Próximo mês">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="calendario__semana" aria-hidden="true">
+              <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+            </div>
+            <div class="calendario__dias" data-dias role="group" aria-label="Escolha o dia"></div>
+          </div>
+          <p class="campo__erro" data-erro="2" role="alert"></p>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="painel__etapa" data-etapa="3">
+          <h3 class="painel__titulo">Escolha o horário</h3>
+          <p class="painel__nota">Horários das 9h às 18h. Os riscados já estão ocupados nesta demonstração.</p>
+          <div class="horarios" data-horarios role="group" aria-label="Escolha o horário"></div>
+          <p class="campo__erro" data-erro="3" role="alert"></p>
+        </div>
+
+        <!-- Etapa 4 -->
+        <div class="painel__etapa" data-etapa="4">
+          <h3 class="painel__titulo">Seus dados</h3>
+          <p class="painel__nota">Na versão final, é com esses dados que o salão confirma o seu horário.</p>
+          <form class="campos" data-formulario novalidate>
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como devemos te chamar?">
+              <span class="campo__erro" data-erro-campo="nome"></span>
+            </div>
+            <div class="campo">
+              <label for="whatsapp">WhatsApp</label>
+              <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(00) 00000-0000">
+              <span class="campo__erro" data-erro-campo="whatsapp"></span>
+            </div>
+            <div class="campo campo--largo">
+              <label for="observacoes">Observações (opcional)</label>
+              <textarea id="observacoes" name="observacoes" placeholder="Conte o que você quer fazer no cabelo, se já fez química antes, alguma preferência de horário…"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Etapa 5 -->
+        <div class="painel__etapa" data-etapa="5">
+          <h3 class="painel__titulo">Resumo do agendamento</h3>
+          <p class="painel__nota">Confira se está tudo certo antes de confirmar.</p>
+          <dl class="resumo" data-resumo></dl>
+          <p class="resumo__confirma">
+            <strong>Isto é uma demonstração.</strong> Nenhum horário foi reservado e nenhum
+            dado foi enviado ou armazenado. Na versão final, a confirmação chegaria pelo
+            WhatsApp do salão.
+          </p>
+        </div>
+
+        <div class="painel__navegacao">
+          <button class="btn btn--contorno" type="button" data-voltar hidden>
+            <span>Voltar</span>
+          </button>
+          <span class="painel__contador" data-contador2>Passo 1 de 5</span>
+          <button class="btn btn--primario" type="button" data-avancar>
+            <span>Continuar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     LOCALIZAÇÃO E CONTATO
+     ===================================================================== -->
+<section class="secao" id="contato" style="background:var(--fundo-alt)">
+  <div class="container">
+    <div class="contato__grade">
+      <div data-revelar="esquerda">
+        <p class="rotulo">Onde nos encontrar</p>
+        <h2 class="titulo-display" style="margin-block:0.6rem 1.2rem">Vamos marcar o seu horário</h2>
+        <p class="texto-guia">
+          O Exclusiva Hair fica em Olinda, Pernambuco. O endereço completo e as atualizações
+          do dia a dia ficam sempre no perfil do Instagram.
+        </p>
+
+        <div class="contato__bloco" style="margin-block-start:1.75rem">
+          <h3>Horário de funcionamento</h3>
+          <div class="contato__horarios">
+            <div class="contato__horario"><b>Segunda a Sexta</b><span>9h às 18h</span></div>
+            <div class="contato__horario"><b>Sábado</b><span>9h às 18h</span></div>
+            <div class="contato__horario"><b>Domingo</b><span>Fechado</span></div>
+          </div>
+        </div>
+
+        <div class="contato__bloco" style="margin-block-start:1.75rem">
+          <h3>Fale com o salão</h3>
+          <p>
+            <a class="link-seta" href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer">@exclusivahair__ no Instagram</a>
+          </p>
+          <p style="margin-block-start:0.9rem">
+            <a class="link-seta" href="#agendamento">Agendar pelo site</a>
+          </p>
+        </div>
+      </div>
+
+      <div data-revelar="direita" style="--atraso:120ms">
+        <div class="contato__mapa">
+          <div class="contato__mapa-pino">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M12 21s-6.5-5.6-6.5-10.4A6.5 6.5 0 0 1 12 4a6.5 6.5 0 0 1 6.5 6.6C18.5 15.4 12 21 12 21z"/>
+              <circle cx="12" cy="10.5" r="2.4"/>
+            </svg>
+            <b>Olinda · Pernambuco</b>
+            <span>O endereço completo está no perfil do Instagram</span>
+            <a class="btn btn--contorno" href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer" style="margin-block-start:0.6rem">
+              <span>Ver no Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     CTA FINAL
+     ===================================================================== -->
+<section class="secao cta-final tema-escuro">
+  <div class="cta-final__imagem" aria-hidden="true">
+    <picture>
+      <source type="image/webp" srcset="assets/img/salao-03-800.webp 800w, assets/img/salao-03-1600.webp 1600w" sizes="100vw">
+      <img src="assets/img/salao-03-800.jpg" srcset="assets/img/salao-03-800.jpg 800w, assets/img/salao-03-1600.jpg 1600w" sizes="100vw" width="800" height="851" loading="lazy" decoding="async" alt="">
+    </picture>
+  </div>
+
+  <div class="container cta-final__conteudo" data-revelar>
+    <p class="rotulo" style="color:var(--rosa-claro)">Sua vez</p>
+    <h2 class="cta-final__titulo">Você sempre <em>linda</em> e exclusiva.</h2>
+    <p class="cta-final__texto">
+      Escolha o serviço, o dia e o horário. O resto do cuidado a gente faz aqui dentro —
+      com o tempo que o seu cabelo precisa.
+    </p>
+    <div class="cta-final__acoes">
+      <a class="btn btn--claro" href="#agendamento"><span>Agendar atendimento</span></a>
+      <a class="btn btn--contorno" href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer" style="color:#fff;border-color:rgba(255,255,255,.42)"><span>Falar no Instagram</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =====================================================================
+     RODAPÉ
+     ===================================================================== -->
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape__grade">
+      <div class="rodape__marca">
+        <img src="assets/img/logo-branca.png" width="240" height="240" loading="lazy" decoding="async" alt="Exclusiva Hair">
+        <p>Alisamentos e tratamentos personalizados em Olinda, Pernambuco. Atendimento de segunda a sábado, das 9h às 18h.</p>
+      </div>
+
+      <div class="rodape__colunas">
+        <div class="rodape__coluna">
+          <h4>Navegar</h4>
+          <ul>
+            <li><a href="#o-salao">O salão</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#ritual">Experiência</a></li>
+            <li><a href="#ambiente">Ambiente</a></li>
+          </ul>
+        </div>
+        <div class="rodape__coluna">
+          <h4>Serviços</h4>
+          <ul>
+            <li>Alisamento</li>
+            <li>Tratamentos personalizados</li>
+            <li>Cronograma capilar</li>
+            <li>Detox capilar</li>
+          </ul>
+        </div>
+        <div class="rodape__coluna">
+          <h4>Atendimento</h4>
+          <ul>
+            <li>Seg a Sáb · 9h às 18h</li>
+            <li>Domingo fechado</li>
+            <li>Olinda · PE</li>
+            <li><a href="#agendamento">Agendar horário</a></li>
+          </ul>
+        </div>
+        <div class="rodape__coluna">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/exclusivahair__/" target="_blank" rel="noopener noreferrer">@exclusivahair__</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <p class="rodape__legal">
+        Apresentação de conceito digital — os horários exibidos no agendamento são
+        demonstrativos e não geram reserva real.
+      </p>
+
+      <div class="credito">
+        <span class="credito__selo" aria-hidden="true">U</span>
+        <span class="credito__texto">
+          <b>Apresentação desenvolvida pela Unitrix App</b>
+          <span>CNPJ 66.438.449/0001-44</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fixa de agendamento (mobile) -->
+<div class="barra-agendar" id="barra-agendar">
+  <span class="barra-agendar__info">
+    <b>Pronta para marcar?</b>
+    <span>Seg a Sáb · 9h às 18h</span>
+  </span>
+  <a class="btn btn--primario" href="#agendamento"><span>Agendar</span></a>
+</div>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
