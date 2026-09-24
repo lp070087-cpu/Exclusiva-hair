@@ -1543,3 +1543,10 @@ html.travado body { overflow: hidden; overscroll-behavior: none; }
 @media (min-width: 900px) and (min-height: 800px) {
   .hero { padding-block-start: calc(var(--altura-cabecalho) + 4.5rem); }
 }
+
+/* CORRECAO LOGO CABECALHO - 24-09-2026 */
+.cabecalho { isolation: isolate; }
+.cabecalho__interno { position: relative; z-index: 10; }
+.marca { position: relative; z-index: 20; overflow: visible; flex-shrink: 0; }
+.marca__simbolo, .marca__texto { position: relative; z-index: 21; }
+
